@@ -17,6 +17,7 @@
           inherit system;
           overlays = [ (import inputs.rust-overlay) ];
         };
+        inherit (pkgs) lib;
 
         nativeRustToolchain = with pkgs; [
           (rust-bin.nightly.latest.default.override {
@@ -40,41 +41,41 @@
         packages.default =
           let
             cargoToml = builtins.fromTOML (builtins.readFile ./Cargo.toml);
-            frontend = cargoToml.package.name;
+            pname = cargoToml.package.name;
           in
           pkgs.rustPlatform.buildRustPackage {
-            name = frontend;
-            pname = frontend;
+            inherit pname;
+            name = pname;
             src = ./.;
             cargoLock = {
               lockFile = ./Cargo.lock;
             };
 
             buildPhase = ''
-              cargo build -j $(nproc) -p ${frontend} --offline --release --target=${wasmTarget}
+              cargo build -j $(nproc) --offline --release --target=${wasmTarget}
               mv target/stylers target/stylers-release
             '';
 
             checkPhase = ''
               # TODO: wasm-validate?
-              cargo clippy --package ${frontend} --all-features -- -W clippy::pedantic -D warnings
-              cargo fmt --package ${frontend} --check
+              cargo clippy --all-features -- -W clippy::pedantic -D warnings
+              cargo fmt --check
             '';
 
             installPhase = ''
               mkdir -p $out/pkg
 
-              cp target/${wasmTarget}/release/${frontend}.wasm $out/pkg/
+              cp target/${wasmTarget}/release/${pname}.wasm $out/pkg/
 
-              ${pkgs.wasm-bindgen-cli}/bin/wasm-bindgen \
-              target/${wasmTarget}/release/${frontend}.wasm \
+              ${lib.getExe pkgs.wasm-bindgen-cli} \
+              target/${wasmTarget}/release/${pname}.wasm \
               --out-dir $out \
               --target web \
               --no-typescript
 
-              ${pkgs.binaryen}/bin/wasm-opt \
-              $out/${frontend}_bg.wasm \
-              -o $out/${frontend}_bg.wasm \
+              ${lib.getExe' pkgs.binaryen "wasm-opt"} \
+              $out/${pname}_bg.wasm \
+              -o $out/${pname}_bg.wasm \
               -Oz
 
               cp target/stylers-release/main.css $out/
@@ -85,12 +86,12 @@
               <head>
                 <meta charset="utf-8">
                 <title>wyattavilla.dev</title>
-                <link rel="modulepreload" href="/${frontend}.js">
+                <link rel="modulepreload" href="/${pname}.js">
                 <link rel="stylesheet" href="/main.css">
               </head>
               <body>
                 <script type="module">
-                  import init from './${frontend}.js';
+                  import init from './${pname}.js';
                   init();
                 </script>
               </body>
