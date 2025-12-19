@@ -1,3 +1,4 @@
+use crate::footer::Footer;
 use crate::header::Header;
 use leptos::prelude::*;
 use stylers::style;
@@ -58,16 +59,6 @@ pub fn App() -> impl IntoView {
             overflow-y: auto;
             background: #AAAAAA;
             color: #000000;
-        }
-
-        .footer {
-            background: #0000AA;
-            color: #FFFFFF;
-            padding: 8px 16px;
-            border-top: 2px solid #FFFFFF;
-            font-size: 12px;
-            display: flex;
-            justify-content: space-between;
         }
 
         .warning {
@@ -177,10 +168,7 @@ pub fn App() -> impl IntoView {
                 }}
             </div>
 
-            <div class="footer">
-                <span>"v02.61 (C)Copyright 1985-2006, American Megatrends, Inc."</span>
-                <span>"↑↓: Select Item | Enter: Go to Sub Screen | F10: Save and Exit | ESC: Exit"</span>
-            </div>
+            <Footer />
         </div>
     }
 }

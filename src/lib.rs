@@ -1,6 +1,7 @@
 use wasm_bindgen::prelude::*;
 
 mod app;
+mod footer;
 mod header;
 
 #[wasm_bindgen]
