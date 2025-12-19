@@ -1,3 +1,4 @@
+use crate::tabs::{About, Education, Employment, Projects};
 use leptos::prelude::*;
 use strum::Display;
 use stylers::style;
@@ -13,6 +14,17 @@ pub enum Tab {
 impl Tab {
     pub fn all() -> &'static [Tab] {
         &[Tab::About, Tab::Employment, Tab::Education, Tab::Projects]
+    }
+
+    pub fn content(self) -> impl IntoView {
+        view! {
+            {move || match self {
+                Tab::About => About().into_any(),
+                Tab::Employment => Employment().into_any(),
+                Tab::Education => Education().into_any(),
+                Tab::Projects => Projects().into_any(),
+            }}
+        }
     }
 }
 
