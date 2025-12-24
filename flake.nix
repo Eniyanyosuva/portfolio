@@ -150,6 +150,17 @@
                   "deadnix check"
                 ];
               };
+
+              spell = {
+                inputs = with pkgs; [
+                  typos
+                  codespell
+                ];
+                cmds = [
+                  "codespell ${self}"
+                  "typos ${self}"
+                ];
+              };
             };
           in
           builtins.mapAttrs (name: args: mkCheck (args // { inherit name; })) checkArgs

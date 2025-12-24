@@ -85,7 +85,7 @@ pub static EMPLOYMENT_ITEMS: LazyLock<Vec<EmploymentData>> = LazyLock::new(|| {
         EmploymentData {
             title: String::from("Backend Developer Intern"),
             company: String::from("Lillup"),
-            location: String::from("San Fransisco, CA. Remote"),
+            location: String::from("San Francisco, CA. Remote"),
             start_date: String::from("September 2024"),
             end_date: String::from("December 2024"),
             link: String::from("https://www.linkedin.com/company/lillup/"),
