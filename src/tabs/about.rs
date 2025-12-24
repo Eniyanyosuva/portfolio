@@ -133,7 +133,15 @@ pub fn About() -> impl IntoView {
                     "I'm a graduate student focused on systems programming and backend development."
                 </p>
                 <p>
-                    "This website is written in Rust, compiled to JavaScript with a Nix flake, and automatically deployed to GitHub pages."
+                    "This website is written in Rust, compiled to JavaScript with a Nix flake, and automatically deployed to GitHub pages. Check out the source code "
+
+                    <a
+                        href="https://github.com/wyatt-avilla/wyattavilla.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        "here"
+                    </a> "."
                 </p>
             </div>
         </div>
