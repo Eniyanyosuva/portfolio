@@ -12,12 +12,22 @@ pub fn Header() -> impl IntoView {
             font-weight: bold;
             border-bottom: 0.125rem solid #FFFFFF;
             font-size: 1.125rem;
+            letter-spacing: 0.05em;
         }
 
         @media (max-width: 768px) {
             .header {
-                padding: 0.5rem 0;
-                font-size: 1rem;
+                padding: 0.6rem 0;
+                font-size: 1.375rem;
+                letter-spacing: 0.075em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 0.75rem 0;
+                font-size: 1.5rem;
+                letter-spacing: 0.1em;
             }
         }
     };
