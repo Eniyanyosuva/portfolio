@@ -21,8 +21,9 @@ pub fn About() -> impl IntoView {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem;
             background-color: transparent;
+            border: 0.125rem solid #000000;
             border-radius: 0.25rem;
             color: inherit;
             text-decoration: none;
