@@ -1,0 +1,39 @@
+name: Checks
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: nixbuild/nix-quick-install-action@v34
+
+      - uses: nix-community/cache-nix-action@v6
+        with:
+          primary-key: nix-${{ hashFiles('**/*.nix', '**/flake.lock') }}
+          paths: |
+            /nix/store
+      
+      - name: Rust Lints
+        run: nix build .#checks.x86_64-linux.clippy -L
+
+  nix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: nixbuild/nix-quick-install-action@v34
+
+      - uses: nix-community/cache-nix-action@v6
+        with:
+          primary-key: nix-${{ hashFiles('**/*.nix', '**/flake.lock') }}
+          paths: |
+            /nix/store
+      
+      - name: Nix lints
+        run: nix build .#checks.x86_64-linux.nixCheck -L
