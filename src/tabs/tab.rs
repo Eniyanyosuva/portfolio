@@ -34,11 +34,13 @@ impl Tab {
 pub fn TabComponent(tab: &'static Tab, active_tab: RwSignal<&'static Tab>) -> impl IntoView {
     let styler_class = style! { "TabComponent",
         .tab {
-            padding: 4px 16px;
+            padding: 0.5rem 1rem;
             cursor: pointer;
             color: #FFFFFF;
             background: #787878;
-            border-right: 2px solid #FFFFFF;
+            border-right: 0.125rem solid #FFFFFF;
+            font-size: 1rem;
+            transition: background-color 0.2s;
         }
 
         .tab.active {
@@ -48,6 +50,20 @@ pub fn TabComponent(tab: &'static Tab, active_tab: RwSignal<&'static Tab>) -> im
 
         .tab:hover {
             background: #5555FF;
+        }
+
+        @media (max-width: 768px) {
+            .tab {
+                padding: 0.4rem 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab {
+                padding: 0.35rem 0.5rem;
+                font-size: 0.8rem;
+            }
         }
     };
 

@@ -7,10 +7,22 @@ pub fn TabContent(active_tab: RwSignal<&'static Tab>) -> impl IntoView {
     let styler_class = style! { "TabContent",
         .content {
             flex: 1;
-            padding: 16px;
+            padding: 1rem;
             overflow-y: auto;
             background: #AAAAAA;
             color: #000000;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 0.5rem;
+            }
         }
     };
 

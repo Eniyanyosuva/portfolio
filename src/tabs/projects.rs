@@ -15,7 +15,7 @@ pub fn ProjectItem(project_data: ProjectData) -> impl IntoView {
         .project-item {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid #787878;
+            border-bottom: 0.0625rem solid #787878;
         }
 
         .project-item:last-child {
@@ -28,19 +28,21 @@ pub fn ProjectItem(project_data: ProjectData) -> impl IntoView {
             align-items: baseline;
             margin-bottom: 0.5rem;
             flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .project-title {
             font-weight: 600;
-            font-size: 1.4vmin;
+            font-size: 1.125rem;
         }
 
         .project-date {
-            font-size: 1.1vmin;
+            font-size: 0.875rem;
+            color: #555;
         }
 
         .project-description {
-            font-size: 1.2vmin;
+            font-size: 0.9rem;
             line-height: 1.5;
         }
 
@@ -51,6 +53,45 @@ pub fn ProjectItem(project_data: ProjectData) -> impl IntoView {
 
         .project-link:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1rem;
+            }
+
+            .project-date {
+                font-size: 0.8rem;
+            }
+
+            .project-description {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-item {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project-title {
+                font-size: 0.95rem;
+            }
+
+            .project-date {
+                font-size: 0.75rem;
+            }
+
+            .project-description {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
         }
     };
 
@@ -74,9 +115,21 @@ pub fn ProjectItem(project_data: ProjectData) -> impl IntoView {
 pub fn Projects(project_items: Vec<ProjectData>) -> impl IntoView {
     let styler_class = style! { "Projects",
         .projects-section {
-            max-width: 800px;
+            max-width: 50rem;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-section {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects-section {
+                padding: 0.75rem;
+            }
         }
     };
 

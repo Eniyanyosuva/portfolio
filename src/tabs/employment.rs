@@ -18,7 +18,7 @@ pub fn EmploymentItem(employment_data: EmploymentData) -> impl IntoView {
         .employment-item {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid #787878;
+            border-bottom: 0.0625rem solid #787878;
         }
 
         .employment-item:last-child {
@@ -31,15 +31,17 @@ pub fn EmploymentItem(employment_data: EmploymentData) -> impl IntoView {
             align-items: baseline;
             margin-bottom: 0.5rem;
             flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .job-title {
             font-weight: 600;
-            font-size: 1.4vmin;
+            font-size: 1.125rem;
         }
 
         .date-range {
-            font-size: 1.1vmin;
+            font-size: 0.875rem;
+            color: #555;
         }
 
         .company-info {
@@ -47,15 +49,17 @@ pub fn EmploymentItem(employment_data: EmploymentData) -> impl IntoView {
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .company-name {
             font-weight: 500;
-            font-size: 1.3vmin;
+            font-size: 1rem;
         }
 
         .location {
-            font-size: 1.2vmin;
+            font-size: 0.875rem;
             color: #666;
         }
 
@@ -63,11 +67,12 @@ pub fn EmploymentItem(employment_data: EmploymentData) -> impl IntoView {
             list-style-type: disc;
             margin-left: 1.5rem;
             margin-top: 0.5rem;
-            font-size: 1.25vmin;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         .description-list li {
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.375rem;
         }
 
         .company-link {
@@ -77,6 +82,59 @@ pub fn EmploymentItem(employment_data: EmploymentData) -> impl IntoView {
 
         .company-link:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .job-title {
+                font-size: 1rem;
+            }
+
+            .date-range {
+                font-size: 0.8rem;
+            }
+
+            .company-name {
+                font-size: 0.9rem;
+            }
+
+            .location {
+                font-size: 0.8rem;
+            }
+
+            .description-list {
+                font-size: 0.85rem;
+                margin-left: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .employment-item {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .employment-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .company-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .job-title {
+                font-size: 0.95rem;
+            }
+
+            .date-range {
+                font-size: 0.75rem;
+            }
+
+            .description-list {
+                margin-left: 1rem;
+                font-size: 0.8rem;
+            }
         }
     };
 
@@ -109,9 +167,21 @@ pub fn EmploymentItem(employment_data: EmploymentData) -> impl IntoView {
 pub fn Employment(employment_items: Vec<EmploymentData>) -> impl IntoView {
     let styler_class = style! { "Employment",
         .employment-section {
-            max-width: 800px;
+            max-width: 50rem;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .employment-section {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .employment-section {
+                padding: 0.75rem;
+            }
         }
     };
 

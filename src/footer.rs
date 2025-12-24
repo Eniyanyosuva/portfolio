@@ -7,10 +7,29 @@ pub fn Footer() -> impl IntoView {
         .footer {
             background: #0000AA;
             color: #FFFFFF;
-            padding: 1vh 0.5vw;
-            border-top: 2px solid #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-top: 0.125rem solid #FFFFFF;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 0.4rem 0.75rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 0.35rem 0.5rem;
+                font-size: 0.7rem;
+            }
         }
     };
 

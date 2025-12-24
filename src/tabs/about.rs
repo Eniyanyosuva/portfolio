@@ -5,15 +5,16 @@ use stylers::style;
 pub fn About() -> impl IntoView {
     let styler_class = style! { "About",
         .about-section {
-            max-width: 800px;
+            max-width: 50rem;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .about-links {
             display: flex;
             gap: 1rem;
             margin-bottom: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .about-link-button {
@@ -22,10 +23,10 @@ pub fn About() -> impl IntoView {
             gap: 0.5rem;
             padding: 0.5rem 1rem;
             background-color: transparent;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             color: inherit;
             text-decoration: none;
-            font-size: 1.2vmin;
+            font-size: 1rem;
             transition: background-color 0.2s, border-color 0.2s;
             cursor: pointer;
         }
@@ -35,12 +36,12 @@ pub fn About() -> impl IntoView {
         }
 
         .button-icon {
-            width: 24px;
-            height: 24px;
+            width: 1.5rem;
+            height: 1.5rem;
         }
 
         .about-content {
-            font-size: 1.3vmin;
+            font-size: 1rem;
             line-height: 1.6;
             text-align: justify;
         }
@@ -51,6 +52,48 @@ pub fn About() -> impl IntoView {
 
         .about-content p:last-child {
             margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 1rem;
+            }
+
+            .about-link-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .button-icon {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+
+            .about-content {
+                font-size: 0.9rem;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 0.75rem;
+            }
+
+            .about-links {
+                gap: 0.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .about-link-button {
+                padding: 0.35rem 0.7rem;
+                font-size: 0.85rem;
+            }
+
+            .about-content {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
         }
     };
 

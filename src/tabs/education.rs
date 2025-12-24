@@ -19,7 +19,7 @@ pub fn EducationItem(education_data: EducationData) -> impl IntoView {
         .education-item {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid #787878;
+            border-bottom: 0.0625rem solid #787878;
         }
 
         .education-item:last-child {
@@ -32,15 +32,17 @@ pub fn EducationItem(education_data: EducationData) -> impl IntoView {
             align-items: baseline;
             margin-bottom: 0.5rem;
             flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .university-name {
             font-weight: 600;
-            font-size: 1.4vmin;
+            font-size: 1.125rem;
         }
 
         .date-range {
-            font-size: 1.1vmin;
+            font-size: 0.875rem;
+            color: #555;
         }
 
         .degree-info {
@@ -49,17 +51,63 @@ pub fn EducationItem(education_data: EducationData) -> impl IntoView {
 
         .major {
             font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
         }
 
         .minor, .specialization {
-            font-size: 1.3vmin;
+            font-size: 0.9rem;
+            margin-bottom: 0.125rem;
         }
 
         .education-footer {
             display: flex;
             gap: 1rem;
             margin-top: 0.5rem;
-            font-size: 1.2vmin;
+            font-size: 0.875rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .university-name {
+                font-size: 1rem;
+            }
+
+            .date-range {
+                font-size: 0.8rem;
+            }
+
+            .major {
+                font-size: 0.9rem;
+            }
+
+            .minor, .specialization {
+                font-size: 0.85rem;
+            }
+
+            .education-footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education-item {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .university-name {
+                font-size: 0.95rem;
+            }
+
+            .date-range {
+                font-size: 0.75rem;
+            }
         }
     };
 
@@ -94,9 +142,21 @@ pub fn EducationItem(education_data: EducationData) -> impl IntoView {
 pub fn Education(education_items: Vec<EducationData>) -> impl IntoView {
     let styler_class = style! { "Education",
         .education-section {
-            max-width: 800px;
+            max-width: 50rem;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .education-section {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education-section {
+                padding: 0.75rem;
+            }
         }
     };
 

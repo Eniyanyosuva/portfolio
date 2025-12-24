@@ -22,6 +22,10 @@ pub fn App() -> impl IntoView {
             box-sizing: border-box;
         }
 
+        :deep(html) {
+            font-size: 16px;
+        }
+
         :deep(html, body) {
             margin: 0;
             padding: 0;
@@ -33,7 +37,7 @@ pub fn App() -> impl IntoView {
 
         .bios-container {
             font-family: "Perfect DOS VGA", monospace;
-            font-size: 2vmin;
+            font-size: clamp(0.875rem, 2vw, 1.125rem);
             width: 100vw;
             height: 100vh;
             background: #0000AA;
@@ -43,10 +47,8 @@ pub fn App() -> impl IntoView {
         }
 
         .content-box {
-            width: 80vw;
-            height: 80vw;
-            max-height: 80vh;
-            max-width: 80vh;
+            width: min(80vw, 80vh);
+            height: min(80vw, 80vh);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -54,10 +56,28 @@ pub fn App() -> impl IntoView {
         }
 
         @media (max-width: 768px) {
+            :deep(html) {
+                font-size: 14px;
+            }
+
+            .bios-container {
+                font-size: clamp(0.75rem, 3vw, 1rem);
+            }
+
             .content-box {
-                width: 90vw;
-                height: 90vw;
-                max-height: 90vh;
+                width: min(95vw, 95vh);
+                height: min(95vw, 95vh);
+            }
+        }
+
+        @media (max-width: 480px) {
+            :deep(html) {
+                font-size: 12px;
+            }
+
+            .content-box {
+                width: 100vw;
+                height: calc(100vh - 4rem);
             }
         }
     };
