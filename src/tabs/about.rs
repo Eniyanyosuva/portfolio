@@ -12,7 +12,7 @@ pub fn About() -> impl IntoView {
 
         .about-links {
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
@@ -43,7 +43,7 @@ pub fn About() -> impl IntoView {
         .about-content {
             font-size: 1rem;
             line-height: 1.6;
-            text-align: justify;
+            text-align: left;
         }
 
         .about-content p {
@@ -81,7 +81,7 @@ pub fn About() -> impl IntoView {
             }
 
             .about-links {
-                gap: 0.75rem;
+                gap: 0.4rem;
                 margin-bottom: 1rem;
             }
 

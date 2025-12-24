@@ -14,7 +14,11 @@ pub fn Tabs(active_tab: RwSignal<&'static Tab>) -> impl IntoView {
 
         @media (max-width: 480px) {
             .tabs {
-                justify-content: space-between;
+                justify-content: stretch;
+            }
+
+            .tabs > * {
+                flex: 1;
             }
         }
     };
