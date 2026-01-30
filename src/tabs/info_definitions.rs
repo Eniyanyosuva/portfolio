@@ -6,28 +6,26 @@ use std::sync::LazyLock;
 pub static EDUCATION_ITEMS: LazyLock<Vec<EducationData>> = LazyLock::new(|| {
     vec![
         EducationData {
-            university: String::from("San Jose State University"),
-            major: String::from("Software Engineering"),
+            university: String::from("VIT-AP University, India"),
+            major: String::from("B.tech Computer Science"),
             minor: None,
-            specialization: String::from("Networking Software"),
-            start_date: String::from("August 2025"),
+            specialization: String::from("Blockchain and Artificial Intelligence"),
+            start_date: String::from("August 2023"),
             end_date: String::from("Present"),
-            gpa: Some(4.0),
+            gpa: Some(8.0),
             transcript_link: Some(String::from(
-                "https://github.com/wyatt-avilla/resume/blob/main/assets/sjsu_unofficial_transcript.pdf",
+                "https://vitap.ac.in",
             )),
         },
         EducationData {
-            university: String::from("University of California, Santa Cruz"),
-            major: String::from("Cognitive Science"),
-            minor: Some(String::from("Computer Science")),
-            specialization: String::from("AI and HCI"),
-            start_date: String::from("September 2021"),
-            end_date: String::from("June 2025"),
-            gpa: Some(3.9),
-            transcript_link: Some(String::from(
-                "https://github.com/wyatt-avilla/resume/blob/main/assets/ucsc_official_transcript.pdf",
-            )),
+            university: String::from("Vidyaa Vikas Metric School, India"),
+            major: String::from("Computer Science"),
+            minor: Some(String::from("Mathematics")),
+            specialization: String::from("Higher Secondary Education"),
+            start_date: String::from("September 2011"),
+            end_date: String::from("June 2023"),
+            gpa: Some(7.9),
+            transcript_link: Some(String::from("https://thanjai.vidyaavikas.ac.in")),
         },
     ]
 });
@@ -35,19 +33,23 @@ pub static EDUCATION_ITEMS: LazyLock<Vec<EducationData>> = LazyLock::new(|| {
 pub static PROJECT_ITEMS: LazyLock<Vec<ProjectData>> = LazyLock::new(|| {
     vec![
         ProjectData {
-            title: String::from("Discord Bot with LLM Tool-Calling Integration"),
-            link: String::from("https://github.com/wyatt-avilla/claude-discord-bot"),
+            title: String::from("RedFed - decentralized social platform on Solana"),
+            link: String::from("https://github.com/Eniyanyosuva/redfed"),
             date: String::from("August 2025"),
             description: String::from(
-                "Built a Discord bot in Rust enabling Anthropic’s Claude to take actions in Discord servers through tool calling, featuring image analysis, message reactions, and configurable interaction patterns with per-server configuration management and probabilistic autonomous responses. Exposed as a NixOS service and packaged with Nix flakes.",
+                "Threads - Create censorship-resistant discussions stored on-chain
+Community Voting - Upvote/downvote system for community-driven content curation
+Web3 Identity - Connect with Solana wallets (Phantom, Solflare)
+Real-time Updates - Instant interactions leveraging Solana's speed
+Transparent Governance - All votes and content immutably recorded on blockchain",
             ),
         },
         ProjectData {
-            title: String::from("Type-Safe REST API with ESP32 Client Integration"),
-            link: String::from("https://github.com/wyatt-avilla/hypha"),
+            title: String::from("Solsplit - splitting protocol smart contracts"),
+            link: String::from("https://github.com/Eniyanyosuva/solsplit"),
             date: String::from("June 2025"),
             description: String::from(
-                "Built a production-ready REST API in Rust using Actix Web to monitor systemd service statuses, with shared type definitions ensuring compile-time safety between server and ESP32 client firmware. Implemented asynchronous message-passing architecture using Embassy for low-power consumption, packaged as a configurable NixOS service with CLI interface for real-time system monitoring.",
+                "A decentralized payment splitting protocol built on Solana, powered by secure on-chain smart contracts that enable instant, fee-free distribution of SOL to multiple recipients. It's designed for freelancers, content creators, and businesses that need automated, trustless payment splitting with transparency and speed.",
             ),
         },
     ]
@@ -56,56 +58,35 @@ pub static PROJECT_ITEMS: LazyLock<Vec<ProjectData>> = LazyLock::new(|| {
 pub static EMPLOYMENT_ITEMS: LazyLock<Vec<EmploymentData>> = LazyLock::new(|| {
     vec![
         EmploymentData {
-            title: String::from("Software Engineer Intern"),
-            company: String::from("Circuit Breaker Labs"),
-            location: String::from("Washington, DC. Remote"),
+            title: String::from("fullstack Dapp Developer"),
+            company: String::from("Solmellons"),
+            location: String::from("Indian, Remote"),
             start_date: String::from("October 2025"),
             end_date: String::from("Present"),
-            link: String::from("https://www.linkedin.com/company/circuit-breaker-labs-ai/"),
+            link: String::from("https://www.linkedin.com/company/dev-watermelons/"),
             description_bullets: vec![
-                String::from("Architected and deployed a production FastAPI REST API with authentication for paid customers to execute LLM red-teaming tests, provisioned on NixOS with PostgreSQL backend"),
-                String::from("Developed Python client library and GitHub Actions workflows to programmatically interface with the red-teaming API, enabling automated security testing in CI/CD pipelines"),
-                String::from("Configured full-stack infrastructure deployment on VPS using NixOS declarative configuration, managing PostgreSQL database, API service, Nginx reverse proxy, and authentication layer"),
-            ],
-        },
-        EmploymentData {
-            title: String::from("Programming Course Developer & Tutor"),
-            company: String::from("University of California, Santa Cruz"),
-            location: String::from("Santa Cruz, California"),
-            start_date: String::from("July 2024"),
-            end_date: String::from("June 2025"),
-            link: String::from("https://www.linkedin.com/school/ucsc/"),
-            description_bullets: vec![
+                String::from("Built and deployed secure, efficient smart contracts, and enhanced blockchain infrastructure to increase transaction throughput and strengthen security. Worked closely with remote, cross-functional teams to ensure smooth project delivery. Mentored junior developers, promoting best practices and high coding standards in blockchain development."),
                 String::from(
-                    "Independently migrated 4 programming assignments and 12 assessments (∼2,000 lines) from C++ to Python, ensuring 100% test compatibility across 1,600+ test cases while implementing modern Python idioms including static typing, generics, comprehensions, and lazy evaluation",
-                ),
-                String::from(
-                    "Led group tutoring sessions for data structures and algorithms, focusing on problem-solving strategies for technical interview preparation",
+                    "Led the design and development of decentralized applications on Solana using Rust, specializing in DeFi and NFT platforms",
                 ),
             ],
         },
         EmploymentData {
-            title: String::from("Backend Developer Intern"),
-            company: String::from("Lillup"),
-            location: String::from("San Francisco, CA. Remote"),
-            start_date: String::from("September 2024"),
-            end_date: String::from("December 2024"),
-            link: String::from("https://www.linkedin.com/company/lillup/"),
+            title: String::from("Blockchain intern"),
+            company: String::from("solmellons"),
+            location: String::from("India, Remote"),
+            start_date: String::from("June 2025"),
+            end_date: String::from("October 2025"),
+            link: String::from("https://www.linkedin.com/company/dev-watermelons/"),
             description_bullets: vec![
                 String::from(
-                    "Built a FastAPI backend with LangChain integration for LLM tool calling, enabling the model to dynamically
-query user data through a RESTful endpoint that processed multi-turn conversations with tool execution"
+                    "Improved platform scalability and security through optimized smart contract and infrastructure design Successfully launched multiple DeFi and NFT dApps, Played a key role in setting robust blockchain development standards across the team",
                 ),
                 String::from(
-                    "Designed and implemented custom tool definitions with automated response parsing, handling JSON deserialization of LLM outputs into function arguments and returning structured responses",
-                ),
-                String::from(
-                    "Extended Markdown syntax using markdown-it-py and regex parsing to support structured metadata (tags, progress indicators, due dates) for improved LLM context in time-sensitive applications",
-                ),
-                String::from(
-                    "Established code quality standards with static typing (Mypy), Ruff for formatting/linting, and automated CI/CD pipeline through GitHub Actions",
+                    "Collaborated with cross-functional teams to deliver projects on time and mentored junior developers, fostering a culture of continuous learning and excellence in blockchain development.",
                 ),
             ],
         },
+
     ]
 });

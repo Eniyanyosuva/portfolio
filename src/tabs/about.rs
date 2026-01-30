@@ -111,7 +111,7 @@ pub fn About() -> impl IntoView {
         <div class="about-section">
             <div class="about-links">
                 <a
-                    href="https://github.com/wyatt-avilla"
+                    href="https://github.com/Eniyanyosuva"
                     class="about-link-button"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -119,7 +119,7 @@ pub fn About() -> impl IntoView {
                     <img src="./assets/github.svg" alt="GitHub" class="button-icon" />
                 </a>
                 <a
-                    href="https://www.linkedin.com/in/wyatt-avilla/"
+                    href="https://www.linkedin.com/in/eniyanyosuva"
                     class="about-link-button"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -130,13 +130,17 @@ pub fn About() -> impl IntoView {
 
             <div class="about-content">
                 <p>
-                    "I'm a graduate student focused on systems programming and backend development."
+                    "I'm Eniyan, a software engineer focused on building scalable, high-performance systems and reliable production software. My work spans backend engineering, distributed systems, and Web3 infrastructure, with a strong emphasis on clean architecture, performance, and security.
+
+I enjoy working close to the core of systems optimizing code, designing resilient services, and shipping real-world products. Currently focused on building robust applications across both traditional and decentralized stacks."
                 </p>
-                <p>
+                <p> 
+
+                
                     "This website is written in Rust, compiled to JavaScript with a Nix flake, and automatically deployed to GitHub pages. Check out the source code "
 
                     <a
-                        href="https://github.com/wyatt-avilla/wyattavilla.dev"
+                        href="https://github.com/Eniyanyosuva/Portfolio.git"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

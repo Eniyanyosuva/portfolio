@@ -161,7 +161,7 @@ pub fn EducationItem(education_data: EducationData) -> impl IntoView {
 
 #[component]
 pub fn Education(education_items: Vec<EducationData>) -> impl IntoView {
-    let styler_class = style! { "Education",
+    let styler_class = style! { "Exeprence ",
         .education-section {
             max-width: 50rem;
             margin: 0 auto;
