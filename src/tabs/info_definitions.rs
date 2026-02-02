@@ -33,7 +33,7 @@ pub static EDUCATION_ITEMS: LazyLock<Vec<EducationData>> = LazyLock::new(|| {
 pub static PROJECT_ITEMS: LazyLock<Vec<ProjectData>> = LazyLock::new(|| {
     vec![
         ProjectData {
-            title: String::from("RedFed - decentralized social platform on Solana"),
+            title: String::from("RedFed - decentralized social dapp on Solana"),
             link: String::from("https://github.com/Eniyanyosuva/redfed"),
             date: String::from("August 2025"),
             description: String::from(
