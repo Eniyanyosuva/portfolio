@@ -52,6 +52,14 @@ Transparent Governance - All votes and content immutably recorded on blockchain"
                 "A decentralized payment splitting protocol built on Solana, powered by secure on-chain smart contracts that enable instant, fee-free distribution of SOL to multiple recipients. It's designed for freelancers, content creators, and businesses that need automated, trustless payment splitting with transparency and speed.",
             ),
         },
+        ProjectData {
+            title: String::from("rust portfolio website"),
+            link: String::from("https://github.com/Eniyanyosuva/portfolio"),
+            date: String::from("June 2025"),
+            description: String::from(
+                "A personal portfolio website built using Rust and the Yew framework, showcasing my projects, skills, and experience in a modern, responsive design. The site leverages Rust's performance and safety features to deliver a fast and secure user experience.",
+            ),
+        },
     ]
 });
 
