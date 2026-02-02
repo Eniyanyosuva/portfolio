@@ -130,9 +130,7 @@ pub fn About() -> impl IntoView {
 
             <div class="about-content">
                 <p>
-                    "I'm Eniyan, a software engineer focused on building scalable, high-performance systems and reliable production software. My work spans backend engineering, distributed systems, and Web3 infrastructure, with a strong emphasis on clean architecture, performance, and security.
-
-I enjoy working close to the core of systems optimizing code, designing resilient services, and shipping real-world products. Currently focused on building robust applications across both traditional and decentralized stacks."
+                    "I'm Eniyan— a Fullstack Web2 + Solana & Rust engineer focused on building high-performance applications, smart contracts, blockchain infrastructure, and developer tooling. I work across modern web stacks and backend systems while specializing in Rust-based Solana programs with Anchor, Web2 ↔ Web3 integrations, bots, and scalable APIs. ship-first, production-focused, and obsessed with clean architecture, security, and performance and I'm positioning myself at the intersection of Fullstack × Systems × Blockchain × AI-native infrastructure."
                 </p>
                 <p> 
 
