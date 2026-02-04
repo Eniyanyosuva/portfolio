@@ -97,8 +97,8 @@ Contributions, issues, and feature requests are welcome!
 
 - GitHub: [@Eniyanyosuva](https://github.com/Eniyanyosuva)
 - Portfolio: [https://eniyanyosuva.github.io/portfolio/](https://eniyanyosuva.github.io/portfolio/)
+- X/Twitter: [@eniyos](https://x.com/eniyos?s=21)
 
 ---
 
-**Note:** This portfolio was built using a template and customized for personal use.
-# Test
+**Note:** This portfolio was built using rust and customized for personal use.
