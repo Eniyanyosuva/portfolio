@@ -101,4 +101,4 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-**Note:** This portfolio was built using rust and customized for personal use.
+**Note:** This portfolio was built using rust and customized for personal use. 
