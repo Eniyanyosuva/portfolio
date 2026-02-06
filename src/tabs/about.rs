@@ -130,7 +130,7 @@ pub fn About() -> impl IntoView {
 
             <div class="about-content">
                 <p>
-                    "I am Eniyan, Fullstack Systems Engineer specializing in Solana, Rust, and blockchain infrastructure, building high-performance smart contracts, developer tooling, and scalable backend platforms. Operates at the intersection of Web3, systems engineering, and AI native infrastructure with a ship-first skills.!"
+                    "I am Eniyan, Fullstack Systems Engineer specializing in Solana, Rust, and blockchain infrastructure, building high-performance smart contracts, developer tooling, and scalable backend platforms. Operates at the intersection of Web3, systems engineering, and AI native infrastructure."
                 </p>
                 <p> 
 
