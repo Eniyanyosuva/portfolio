@@ -85,14 +85,6 @@ You can also trigger deployment manually:
 2. Select "Deploy to GitHub Pages"
 3. Click "Run workflow"
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
 ## 📧 Contact
 
 - GitHub: [@Eniyanyosuva](https://github.com/Eniyanyosuva)
