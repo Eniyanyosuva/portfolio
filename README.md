@@ -6,13 +6,6 @@ A modern, responsive portfolio website built with Rust and WebAssembly.
 
 Visit the live site: [https://eniyanyosuva.github.io/portfolio/](https://eniyanyosuva.github.io/portfolio/)
 
-## 🚀 Features
-
-- Built with Rust and compiled to WebAssembly for optimal performance
-- Responsive design that works on all devices
-- Fast loading times and smooth interactions
-- Automated deployment via GitHub Actions
-
 ## 🛠️ Tech Stack
 
 - **Rust** - Core programming language
