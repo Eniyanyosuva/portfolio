@@ -1,5 +1,5 @@
 {
-  description = "wyattavilla.dev flake";
+  description = "eniyanyosuva.dev flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -84,7 +84,7 @@
             <head>
               <meta charset="utf-8">
               <meta name="darkreader-lock">
-              <title>wyattavilla.dev</title>
+              <title>Eniyanyosuva.dev</title>
               <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
               <link rel="modulepreload" href="./${pname}.js">
               <link rel="stylesheet" href="./main.css">
