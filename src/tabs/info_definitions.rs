@@ -37,7 +37,16 @@ pub static PROJECT_ITEMS: LazyLock<Vec<ProjectData>> = LazyLock::new(|| {
             link: String::from("https://github.com/Eniyanyosuva/ChainKey"),
             date: String::from("March 2026"),
             description: String::from(
-                "ChainKey is a Solana-based protocol designed to replace centralized API key infrastructure (DB + Redis + Auth Middleware) with a deterministic on-chain state machine. By migrating key lifecycles to the Solana ledger, ChainKey provides immutable audit trails, cryptographically enforced rate limits, and trustless credential rotation. This innovative approach enhances security, transparency, and reliability for API providers and consumers, eliminating single points of failure and enabling seamless integration with existing systems.",
+                "A decentralized API key management protocol built on Solana that replaces
+traditional key infrastructure such as databases, Redis caches, and
+authentication middleware with a deterministic on-chain state machine.
+
+ChainKey manages the full lifecycle of API credentials directly on the
+Solana ledger, enabling cryptographically verifiable access control,
+immutable audit trails, secure key rotation, and enforceable rate limits.
+By removing centralized key storage and authentication layers, the system
+eliminates single points of failure while providing transparent,
+tamper-resistant credential management for modern API services.",
             ),
         },
         ProjectData {
