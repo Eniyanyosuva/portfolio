@@ -33,19 +33,15 @@ pub static EDUCATION_ITEMS: LazyLock<Vec<EducationData>> = LazyLock::new(|| {
 pub static PROJECT_ITEMS: LazyLock<Vec<ProjectData>> = LazyLock::new(|| {
     vec![
         ProjectData {
-            title: String::from("RedFed - decentralized social dapp on Solana"),
-            link: String::from("https://github.com/Eniyanyosuva/redfed"),
-            date: String::from("August 2025"),
+            title: String::from("ChainKey - Decentralized API State Machine"),
+            link: String::from("https://github.com/Eniyanyosuva/ChainKey"),
+            date: String::from("March 2026"),
             description: String::from(
-                "Threads - Create censorship-resistant discussions stored on-chain
-Community Voting - Upvote/downvote system for community-driven content curation
-Web3 Identity - Connect with Solana wallets (Phantom, Solflare)
-Real-time Updates - Instant interactions leveraging Solana's speed
-Transparent Governance - All votes and content immutably recorded on blockchain",
+                "ChainKey is a Solana-based protocol designed to replace centralized API key infrastructure (DB + Redis + Auth Middleware) with a deterministic on-chain state machine. By migrating key lifecycles to the Solana ledger, ChainKey provides immutable audit trails, cryptographically enforced rate limits, and trustless credential rotation. This innovative approach enhances security, transparency, and reliability for API providers and consumers, eliminating single points of failure and enabling seamless integration with existing systems.",
             ),
         },
         ProjectData {
-            title: String::from("Solsplit - splitting protocol smart contracts"),
+            title: String::from("Solsplit - Splitting protocol smart contracts"),
             link: String::from("https://github.com/Eniyanyosuva/solsplit"),
             date: String::from("June 2025"),
             description: String::from(
